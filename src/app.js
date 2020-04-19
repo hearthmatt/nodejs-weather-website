@@ -67,7 +67,7 @@ app.get('/weather', (req, res) => {
             });
         };
         
-        forecast(latitude, longitude, location, (error, { location, description, temperature, feelslike }) => {
+        forecast(latitude, longitude, location, (error, { location, description, temperature, feelslike, windspeed, winddirection, iconurl }) => {
             if (error) {
                 return res.send({
                     error: error
@@ -78,7 +78,10 @@ app.get('/weather', (req, res) => {
                 location: location,
                 description: description,
                 temperature: temperature,
-                feelslike: feelslike
+                feelslike: feelslike,
+                windspeed: windspeed,
+                winddirection: winddirection,
+                iconurl: iconurl
             });
  
         });

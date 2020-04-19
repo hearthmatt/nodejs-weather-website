@@ -41,6 +41,10 @@ header a {
     width: 200px;
 }
 
+.weather-icon {
+    width: 40px;
+}
+
 input {
     border: 1px solid #cccccc;
     padding: 8px;
