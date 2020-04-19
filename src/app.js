@@ -7,6 +7,9 @@ const forecast = require('./utils/forecast');
 
 const app = express();
 
+// Get Heroku port and provide default
+const port = process.env.PORT || 3000;
+
 //Set base directory for express static content
 const publicDirectoryPath = path.join(__dirname, '../public');
 app.use(express.static(publicDirectoryPath));
@@ -103,7 +106,7 @@ app.get('*', (req, res) => {
     });
 });
 
-// Start the server
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.');
+// Start the server - set port from an Heroku provided environment variable
+app.listen(port, () => {
+    console.log('Server is up on port: ' + port);
 });
