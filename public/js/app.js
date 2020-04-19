@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageFive.textContent = '';
 
     const searchLocation = searchElement.value;
-    const url = 'http://192.168.2.180:3000/weather?address=' + searchLocation;
+    const url = 'http://localhost:3000/weather?address=' + searchLocation;
  
     // Note: fetch is Client Side only, i.e. it only works in a script in a browser
     //fetch(url, {mode: 'no-cors'}).then((response) => {
