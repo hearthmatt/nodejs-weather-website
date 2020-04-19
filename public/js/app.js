@@ -23,7 +23,6 @@ weatherForm.addEventListener('submit', (e) => {
 
     const searchLocation = searchElement.value;
 
-    console.log(weatherIcon);
  
     // Note: fetch is Client Side only, i.e. it only works in a script in a browser
     //fetch(url, {mode: 'no-cors'}).then((response) => {
